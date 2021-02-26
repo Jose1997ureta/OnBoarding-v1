@@ -27,11 +27,7 @@ export const SliderComponent = ({
         width: SIZES.width,
       }}>
       <View style={styles.containerImage}>
-        <Image
-          source={image}
-          resizeMode="contain"
-          style={{width: '100%', height: '100%'}}
-        />
+        <Image source={image} resizeMode="contain" style={styles.imagen} />
       </View>
       <View style={styles.containerText}>
         <Text style={styles.title}>{title}</Text>
@@ -58,17 +54,26 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     top: -70,
   },
+  imagen: {
+    width: SIZES.height > 700 ? '100%' : '70%',
+    height: SIZES.height > 700 ? '100%' : '70%',
+  },
   containerText: {
     position: 'absolute',
     bottom: '20%',
     width: '100%',
     alignItems: 'center',
   },
-  title: {...FONTS.h1, color: COLORS.color3},
-  description: {...FONTS.body3, color: COLORS.color3, marginTop: SIZES.base},
+  title: {...FONTS.h1, color: COLORS.color3, textAlign: 'center'},
+  description: {
+    ...FONTS.body3,
+    color: COLORS.color3,
+    marginTop: SIZES.base,
+    textAlign: 'center',
+  },
   buttonContainer: {
     position: 'absolute',
-    bottom: '5%',
+    bottom: SIZES.height > 700 ? '5%' : '2%',
     width: '100%',
     alignItems: 'center',
   },

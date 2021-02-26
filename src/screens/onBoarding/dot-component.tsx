@@ -31,15 +31,6 @@ export const DotComponent = ({index, dotPosition}: DotComponentProps) => {
 };
 
 const styles = StyleSheet.create({
-  dotContainer: {
-    position: 'absolute',
-    bottom: SIZES.height > 700 ? '30%' : '16%',
-  },
-  dot: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    height: SIZES.padding,
-  },
   dotItem: {
     width: 20,
     height: 20,

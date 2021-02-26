@@ -75,8 +75,6 @@ export const OnBoardingScreen = () => {
   );
 };
 
-// export default onBoardingScreen;
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -86,7 +84,7 @@ const styles = StyleSheet.create({
   },
   dotContainer: {
     position: 'absolute',
-    bottom: SIZES.height > 700 ? '30%' : '16%',
+    bottom: SIZES.height > 700 ? '30%' : '14%',
   },
   dot: {
     flexDirection: 'row',
